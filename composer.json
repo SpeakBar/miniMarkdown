@@ -1,0 +1,19 @@
+{
+    "name": "speakbar/mini-markdown",
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "symfony/var-dumper": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Speakbar\\MiniMarkdown\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nirbose",
+            "email": "contact@nirbose.fr"
+        }
+    ],
+    "require": {}
+}
