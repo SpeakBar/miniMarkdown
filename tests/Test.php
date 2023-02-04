@@ -40,4 +40,12 @@ class Test extends TestCase
 
         $this->assertEquals("John <strong><em>Doe</strong></em> <em><u>and</u></em> <strong><u>Me</u></strong>", $html);
     }
+
+    public function test_cutom_rules_token() {
+        $html = Markdown::parse("{-John-} **Doe**")->addRules('html', [
+            "/\{\-(.*?)\-\}/" => "<!--$1-->",
+        ])->toHtml();
+
+        $this->assertEquals("<!--John--> <strong>Doe</strong>", $html);
+    }
 }
